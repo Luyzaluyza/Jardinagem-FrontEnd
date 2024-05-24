@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Integrador - Quinto Semestre</title>
+    <title>Painel Principal</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,23 +18,12 @@
         }
 
         .container {
-            display: flex;
             max-width: 800px;
-            background-color: #bedbac;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            border: 4px dotted #000; /* Destaque de contorno preto pontilhado */
-        }
-
-        .right-section {
-            flex: 1;
-            padding: 20px;
             text-align: center;
         }
 
         h1 {
-            color: #f9f9f9; /* Branco */
+            color: #6C3483; /* Roxo */
             margin-bottom: 20px;
         }
 
@@ -44,27 +33,21 @@
 
         a {
             text-decoration: none;
-            color: #f9f9f9; /* Azul Claro */
+            color: #3498DB; /* Azul Claro */
             font-weight: bold;
             transition: color 0.3s ease;
         }
 
-        a:last-child {
-            margin-right: 0;
-        }
-
         a:hover {
-            color: #f9f9f9; /* Azul mais escuro */
+            color: #2874A6; /* Azul mais escuro */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="right-section">
-            <h1>Bem-vindo ao Monitoramento de Jardinagem!</h1>
-            <p>Por favor, faça o login ou cadastre-se para acessar o sistema.</p>
-            <a href="{{ url_for('login') }}">Entrar</a> ou <a href="{{ url_for('register') }}">Cadastrar</a>
-        </div>
+        <h1>Bem-vindo ao Painel Principal</h1>
+        <p>Aqui você pode ver suas informações, realizar ações e explorar os recursos do sistema.</p>
+        <a href="{{ url_for('logout') }}">Sair</a>
     </div>
 </body>
 </html>
